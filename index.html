@@ -32,7 +32,19 @@
 
     <script type="text/x-handlebars-template">
       <h3>{{name}}</h3>
-      
+      <a href="{{url}}">Edit Recipe</a><br>
+      {{> recipeDetailsPartial}}
+    </script>
+
+    <!-- recipeDetailsPartial  -->
+
+    <script id="recipe-details-partial" type="text/x-handlebars-template">
+      <p>{{description}}</p>
+      <ul>
+        {{#each ingredients}}
+          <li>{{name}}</li>
+        {{/each}}
+      </ul>
     </script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
