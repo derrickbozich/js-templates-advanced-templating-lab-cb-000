@@ -1,11 +1,11 @@
-//Displays initial form to make new recipe. On submit, it invokes createRecipe() 
+//Displays initial form to make new recipe. On submit, it invokes createRecipe()
 function initForm(){
   let newRecipeForm = document.getElementById("recipe-form-template");
   let template = Handlebars.compile(newRecipeForm);
   document.getElementsByTagName('main')[0].innerHTML = template({'submitAction': 'createRecipe()'})
 }
 
-//renders a new recipe from the values inputted into initial form 
+//renders a new recipe from the values inputted into initial form
 function createRecipe(){
   let recipe = getRecipeValues();
   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
