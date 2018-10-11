@@ -1,3 +1,26 @@
+function createRecipe(){
+  let recipe = getRecipeValues();
+  let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  let html = template({})
+}
+
+function getRecipeValues(){
+  let ingredientNodes = document.getElementsByName("ingredients");
+  let ingredients = [];
+  for (let i = 0; i < ingredientNodes.length; i++){
+    if (ingredientNodes[i].value != '') {
+      ingredients.push(ingredientNodes[i].value)
+    }
+  }
+
+  let name = document.getElementsByName("name").value;
+  let description = document.getElementsByName("description").value;
+  let recipe = {name, description, ingredients};
+
+  return recipe;
+
+}
+
 function handlebarsSetup(){
   //handlebars registrations are here
   Handlebars.registerHelper("displayIngredient", function(ingredient){
