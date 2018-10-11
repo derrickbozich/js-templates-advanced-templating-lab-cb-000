@@ -11,9 +11,9 @@
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
-    
+
     <!--- Form Templates  --->
-    
+
     <!-- recipe-form-template -->
     <script id="recipe-form-template" type="text/x-handlebars-template">
       <form onsubmit="createRecipe();return false;">
@@ -24,8 +24,9 @@
         Ingredient 3: <input name="ingredient3" type="text"><br>
         Ingredient 4: <input name="ingredient4" type="text"><br>
         Ingredient 5: <input name="ingredient5" type="text"><br>
+        <input type="submit">
       </form>
-      
+
     </script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
