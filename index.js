@@ -3,7 +3,7 @@ function createRecipe(){
   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   let html = template(recipe)
 
-  document.getElementById('main')[0].innerHTML = html;
+  document.getElementById('main').innerHTML = html;
 }
 
 function getRecipeValues(){
