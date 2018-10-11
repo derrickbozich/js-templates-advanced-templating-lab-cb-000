@@ -41,12 +41,17 @@
     <script id="recipe-details-partial" type="text/x-handlebars-template">
       <p>{{description}}</p>
       <ul>
-        {{#each this.ingredients}}
+        {{#each ingredients}}
           {{displayIngredient}}
         {{/each}}
       </ul>
     </script>
 
+    <!-- recipe form -->
+
+    <script id='recipe-form' type="text/x-handlebars-template">
+      
+    </script>
 
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
