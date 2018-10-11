@@ -1,8 +1,11 @@
+//Displays initial form to make new recipe. On submit, it invokes createRecipe() 
 function initForm(){
   let newRecipeForm = document.getElementById("recipe-form-template");
   let template = Handlebars.compile(newRecipeForm);
   document.getElementsByTagName('main')[0].innerHTML = template({'submitAction': 'createRecipe()'})
 }
+
+//renders a new recipe from the values inputted into initial form 
 function createRecipe(){
   let recipe = getRecipeValues();
   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
@@ -11,6 +14,7 @@ function createRecipe(){
   document.getElementById('main').innerHTML = html;
 }
 
+//renders an edited recipe
 function updateRecipe(){
   let recipe = getRecipeValues();
   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
@@ -19,6 +23,7 @@ function updateRecipe(){
   document.getElementById('main').innerHTML = html;
 }
 
+//retrieves recipe values from the form that is currently rendered
 function getRecipeValues(){
   let ingredientNodes = document.getElementsByName("ingredients");
   let ingredients = [];
@@ -49,6 +54,7 @@ function handlebarsSetup(){
 function init() {
   //put any page initialization/handlebars initialization here
   handlebarsSetup();
+  initForm();
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
