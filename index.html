@@ -41,7 +41,7 @@
     <script id="recipe-details-partial" type="text/x-handlebars-template">
       <p>{{description}}</p>
       <ul>
-        {{#each ingredients}}
+        {{#each this.ingredients}}
           {{displayIngredient}}
         {{/each}}
       </ul>
