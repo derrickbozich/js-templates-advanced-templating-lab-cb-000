@@ -6,6 +6,14 @@ function createRecipe(){
   document.getElementById('main').innerHTML = html;
 }
 
+function updateRecipe(){
+  let recipe = getRecipeValues();
+  let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  let html = template(recipe)
+
+  document.getElementById('main').innerHTML = html;
+}
+
 function getRecipeValues(){
   let ingredientNodes = document.getElementsByName("ingredients");
   let ingredients = [];
