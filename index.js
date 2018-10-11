@@ -9,6 +9,7 @@ function init() {
   function renderDetailsPartial() {
     let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
     let html = template({description: this.description, ingredients: this.ingredients});
+    return html;
   }
 
   // Handlebars.registerPartial('recipeFormPartial', function() {
