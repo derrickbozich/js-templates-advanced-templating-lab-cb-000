@@ -1,6 +1,6 @@
 //Displays initial form to make new recipe. On submit, it invokes createRecipe()
 function initForm(){
-  let newRecipeForm = document.getElementById("recipe-form-template");
+  let newRecipeForm = document.getElementById("recipe-form-template").innerHTML;
   let template = Handlebars.compile(newRecipeForm);
   document.getElementsById('main').innerHTML = template({'submitAction': 'createRecipe()'})
 }
