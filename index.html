@@ -15,7 +15,7 @@
     <!--- Form Templates  --->
 
     <!-- recipe-form-template -->
-    <script id="recipe-form-templat" type="text/x-handlebars-template">
+    <script id="recipe-form-template" type="text/x-handlebars-template">
       <form onsubmit="createRecipe();return false;">
         Name: <input name="name" type="text"><br>
         Description: <input name="description" type="text"><br>
@@ -26,7 +26,13 @@
         Ingredient 5: <input name="ingredients" type="text"><br>
         <input type="submit">
       </form>
+    </script>
 
+    <!-- recipe-template  -->
+
+    <script type="text/x-handlebars-template">
+      <h3>{{name}}</h3>
+      
     </script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
