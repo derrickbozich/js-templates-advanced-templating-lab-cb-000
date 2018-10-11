@@ -22,18 +22,22 @@
     </script>
 
     <!-- recipe-form-template -->
+
     <script id="recipe-form-partial" type="text/x-handlebars-template">
-
-        Name: <input name="name" type="text"><br>
-        Description: <input name="description" type="text"><br>
-        Ingredient 1: <input name="ingredients" type="text"><br>
-        Ingredient 2: <input name="ingredients" type="text"><br>
-        Ingredient 3: <input name="ingredients" type="text"><br>
-        Ingredient 4: <input name="ingredients" type="text"><br>
-        Ingredient 5: <input name="ingredients" type="text"><br>
-        <input type="submit">
-
-    </script>
+       Name: <input id="name" type="text" value="{{name}}"><br>
+       Description: <input id="description" type="text" value="{{description}}"><br>
+       <h4>Ingredients</h4>
+       {{#each ingredients}}
+       <input name="ingredients" type="text" value="{{this}}"><br>
+       {{else}}
+       <input name="ingredients" type="text"><br>
+       <input name="ingredients" type="text"><br>
+       <input name="ingredients" type="text"><br>
+       <input name="ingredients" type="text"><br>
+       <input name="ingredients" type="text"><br>
+       {{/each}}
+       <input type="submit">
+     </script>
 
     <!-- recipe-template  -->
 
