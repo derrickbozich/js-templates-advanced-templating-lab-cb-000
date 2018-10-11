@@ -2,7 +2,7 @@
 function initForm(){
   let newRecipeForm = document.getElementById("recipe-form-template").innerHTML;
   let template = Handlebars.compile(newRecipeForm);
-  document.getElementsById('main').innerHTML = template({'submitAction': 'createRecipe()'})
+  document.getElementById('main').innerHTML = template({'submitAction': 'createRecipe()'})
 }
 
 //renders a new recipe from the values inputted into initial form
