@@ -6,22 +6,24 @@ function initForm(){
 }
 
 //renders a new recipe from the values inputted into initial form
-function createRecipe(){
-  let recipe = getRecipeValues();
-  let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  let html = template(recipe)
+// function createRecipe(){
+//   let recipe = getRecipeValues();
+//   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+//   let html = template(recipe)
+//
+//   document.getElementById('main').innerHTML = html;
+// }
 
-  document.getElementById('main').innerHTML = html;
-}
+
 
 //renders an edited recipe
-function updateRecipe(){
-  let recipe = getRecipeValues();
-  let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  let html = template(recipe)
-
-  document.getElementById('main').innerHTML = html;
-}
+// function updateRecipe(){
+//   let recipe = getRecipeValues();
+//   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+//   let html = template(recipe)
+//
+//   document.getElementById('main').innerHTML = html;
+// }
 
 //retrieves recipe values from the form that is currently rendered
 function getRecipeValues(){
