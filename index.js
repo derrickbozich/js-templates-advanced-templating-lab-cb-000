@@ -14,6 +14,20 @@ function createRecipe(){
   document.getElementById('main').innerHTML = html;
 }
 
+//displays a form filled with initial values for edit
+function displayEditForm(){
+  let name = document.getElementById('recipe-name');
+  let description = document.getElementById('recipe-description');
+  let ingredientNodes = document.getElementsByName('recipe-ingredients');
+  let ingredients = [];
+
+  for (let i = 0; i < ingredientNodes.length; i++){
+    ingredients.push(ingredientNodes[i].innerText);  
+  }
+
+  let recipe = {name, description, ingredients, 'submitAction': 'createRecipe()'}
+}
+
 
 
 //renders an edited recipe
