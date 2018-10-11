@@ -11,9 +11,9 @@ function init() {
     let html = template({description: this.decription, ingredients: this.ingredients});
   }
 
-  Handlebars.registerPartial('recipeFormPartial', function() {
-
-  });
+  // Handlebars.registerPartial('recipeFormPartial', function() {
+  //
+  // });
 
 
 }
