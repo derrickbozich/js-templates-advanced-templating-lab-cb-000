@@ -38,7 +38,7 @@
     <!-- recipe-template  -->
 
     <script id='recipe-template' type="text/x-handlebars-template">
-      <h3>{{name}}</h3>
+      <h3 id='recipe-name'>{{name}}</h3>
       <a href="#" onclick='displayEditForm();return false;'>Edit Recipe</a><br>
       {{> recipeDetailsPartial}}
     </script>
@@ -46,8 +46,8 @@
     <!-- recipeDetailsPartial  -->
 
     <script id="recipe-details-partial" type="text/x-handlebars-template">
-      <p>{{description}}</p>
-      <ul>
+      <p id='recipe-description'>{{description}}</p>
+      <ul id='recipe-ingredients'>
         {{#each ingredients}}
           {{displayIngredient this}}
         {{/each}}
