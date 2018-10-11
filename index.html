@@ -32,7 +32,7 @@
 
     <script id='recipe-template' type="text/x-handlebars-template">
       <h3>{{name}}</h3>
-      <a href="{{url}}">Edit Recipe</a><br>
+      <a onclick='displayEditForm();return false;'>Edit Recipe</a><br>
       {{> recipeDetailsPartial}}
     </script>
 
@@ -42,10 +42,12 @@
       <p>{{description}}</p>
       <ul>
         {{#each ingredients}}
-          <li>{{name}}</li>
+          {{displayIngredient}}
         {{/each}}
       </ul>
     </script>
+
+    
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
     <script src="node_modules/mocha/mocha.js"></script>
