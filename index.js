@@ -22,10 +22,16 @@ function displayEditForm(){
   let ingredients = [];
 
   for (let i = 0; i < ingredientNodes.length; i++){
-    ingredients.push(ingredientNodes[i].innerText);  
+    ingredients.push(ingredientNodes[i].innerText);
   }
 
   let recipe = {name, description, ingredients, 'submitAction': 'createRecipe()'}
+
+  let recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML;
+  let template = Handlebars.compile(recipeFormTemplate);
+  let html = template(recipe);
+
+  document.getElementById('main').innerHTML = html;
 }
 
 
